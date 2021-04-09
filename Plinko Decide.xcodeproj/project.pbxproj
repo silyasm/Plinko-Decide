@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F3D01E32620B0B6004DFA8D /* Plinko_DecideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3D01E22620B0B6004DFA8D /* Plinko_DecideApp.swift */; };
+		3F3D01E52620B0B6004DFA8D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3D01E42620B0B6004DFA8D /* ContentView.swift */; };
+		3F3D01E72620B0BB004DFA8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F3D01E62620B0BB004DFA8D /* Assets.xcassets */; };
+		3F3D01EA2620B0BB004DFA8D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F3D01E92620B0BB004DFA8D /* Preview Assets.xcassets */; };
+		3F3D01F52620B0BB004DFA8D /* Plinko_DecideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3D01F42620B0BB004DFA8D /* Plinko_DecideTests.swift */; };
+		3F3D02002620B0BB004DFA8D /* Plinko_DecideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3D01FF2620B0BB004DFA8D /* Plinko_DecideUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3F3D01F12620B0BB004DFA8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F3D01D72620B0B5004DFA8D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F3D01DE2620B0B6004DFA8D;
+			remoteInfo = "Plinko Decide";
+		};
+		3F3D01FC2620B0BB004DFA8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F3D01D72620B0B5004DFA8D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F3D01DE2620B0B6004DFA8D;
+			remoteInfo = "Plinko Decide";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3F3D01DF2620B0B6004DFA8D /* Plinko Decide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plinko Decide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F3D01E22620B0B6004DFA8D /* Plinko_DecideApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plinko_DecideApp.swift; sourceTree = "<group>"; };
+		3F3D01E42620B0B6004DFA8D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3F3D01E62620B0BB004DFA8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3F3D01E92620B0BB004DFA8D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3F3D01EB2620B0BB004DFA8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F3D01F02620B0BB004DFA8D /* Plinko DecideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Plinko DecideTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F3D01F42620B0BB004DFA8D /* Plinko_DecideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plinko_DecideTests.swift; sourceTree = "<group>"; };
+		3F3D01F62620B0BB004DFA8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F3D01FB2620B0BB004DFA8D /* Plinko DecideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Plinko DecideUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F3D01FF2620B0BB004DFA8D /* Plinko_DecideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plinko_DecideUITests.swift; sourceTree = "<group>"; };
+		3F3D02012620B0BB004DFA8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F3D01DC2620B0B6004DFA8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F3D01ED2620B0BB004DFA8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F3D01F82620B0BB004DFA8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F3D01D62620B0B5004DFA8D = {
+			isa = PBXGroup;
+			children = (
+				3F3D01E12620B0B6004DFA8D /* Plinko Decide */,
+				3F3D01F32620B0BB004DFA8D /* Plinko DecideTests */,
+				3F3D01FE2620B0BB004DFA8D /* Plinko DecideUITests */,
+				3F3D01E02620B0B6004DFA8D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3F3D01E02620B0B6004DFA8D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F3D01DF2620B0B6004DFA8D /* Plinko Decide.app */,
+				3F3D01F02620B0BB004DFA8D /* Plinko DecideTests.xctest */,
+				3F3D01FB2620B0BB004DFA8D /* Plinko DecideUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F3D01E12620B0B6004DFA8D /* Plinko Decide */ = {
+			isa = PBXGroup;
+			children = (
+				3F3D01E22620B0B6004DFA8D /* Plinko_DecideApp.swift */,
+				3F3D01E42620B0B6004DFA8D /* ContentView.swift */,
+				3F3D01E62620B0BB004DFA8D /* Assets.xcassets */,
+				3F3D01EB2620B0BB004DFA8D /* Info.plist */,
+				3F3D01E82620B0BB004DFA8D /* Preview Content */,
+			);
+			path = "Plinko Decide";
+			sourceTree = "<group>";
+		};
+		3F3D01E82620B0BB004DFA8D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3F3D01E92620B0BB004DFA8D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3F3D01F32620B0BB004DFA8D /* Plinko DecideTests */ = {
+			isa = PBXGroup;
+			children = (
+				3F3D01F42620B0BB004DFA8D /* Plinko_DecideTests.swift */,
+				3F3D01F62620B0BB004DFA8D /* Info.plist */,
+			);
+			path = "Plinko DecideTests";
+			sourceTree = "<group>";
+		};
+		3F3D01FE2620B0BB004DFA8D /* Plinko DecideUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3F3D01FF2620B0BB004DFA8D /* Plinko_DecideUITests.swift */,
+				3F3D02012620B0BB004DFA8D /* Info.plist */,
+			);
+			path = "Plinko DecideUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F3D01DE2620B0B6004DFA8D /* Plinko Decide */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F3D02042620B0BB004DFA8D /* Build configuration list for PBXNativeTarget "Plinko Decide" */;
+			buildPhases = (
+				3F3D01DB2620B0B6004DFA8D /* Sources */,
+				3F3D01DC2620B0B6004DFA8D /* Frameworks */,
+				3F3D01DD2620B0B6004DFA8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Plinko Decide";
+			productName = "Plinko Decide";
+			productReference = 3F3D01DF2620B0B6004DFA8D /* Plinko Decide.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3F3D01EF2620B0BB004DFA8D /* Plinko DecideTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F3D02072620B0BB004DFA8D /* Build configuration list for PBXNativeTarget "Plinko DecideTests" */;
+			buildPhases = (
+				3F3D01EC2620B0BB004DFA8D /* Sources */,
+				3F3D01ED2620B0BB004DFA8D /* Frameworks */,
+				3F3D01EE2620B0BB004DFA8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F3D01F22620B0BB004DFA8D /* PBXTargetDependency */,
+			);
+			name = "Plinko DecideTests";
+			productName = "Plinko DecideTests";
+			productReference = 3F3D01F02620B0BB004DFA8D /* Plinko DecideTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3F3D01FA2620B0BB004DFA8D /* Plinko DecideUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F3D020A2620B0BB004DFA8D /* Build configuration list for PBXNativeTarget "Plinko DecideUITests" */;
+			buildPhases = (
+				3F3D01F72620B0BB004DFA8D /* Sources */,
+				3F3D01F82620B0BB004DFA8D /* Frameworks */,
+				3F3D01F92620B0BB004DFA8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F3D01FD2620B0BB004DFA8D /* PBXTargetDependency */,
+			);
+			name = "Plinko DecideUITests";
+			productName = "Plinko DecideUITests";
+			productReference = 3F3D01FB2620B0BB004DFA8D /* Plinko DecideUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3F3D01D72620B0B5004DFA8D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					3F3D01DE2620B0B6004DFA8D = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					3F3D01EF2620B0BB004DFA8D = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 3F3D01DE2620B0B6004DFA8D;
+					};
+					3F3D01FA2620B0BB004DFA8D = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 3F3D01DE2620B0B6004DFA8D;
+					};
+				};
+			};
+			buildConfigurationList = 3F3D01DA2620B0B5004DFA8D /* Build configuration list for PBXProject "Plinko Decide" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3F3D01D62620B0B5004DFA8D;
+			productRefGroup = 3F3D01E02620B0B6004DFA8D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F3D01DE2620B0B6004DFA8D /* Plinko Decide */,
+				3F3D01EF2620B0BB004DFA8D /* Plinko DecideTests */,
+				3F3D01FA2620B0BB004DFA8D /* Plinko DecideUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F3D01DD2620B0B6004DFA8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F3D01EA2620B0BB004DFA8D /* Preview Assets.xcassets in Resources */,
+				3F3D01E72620B0BB004DFA8D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F3D01EE2620B0BB004DFA8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F3D01F92620B0BB004DFA8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F3D01DB2620B0B6004DFA8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F3D01E52620B0B6004DFA8D /* ContentView.swift in Sources */,
+				3F3D01E32620B0B6004DFA8D /* Plinko_DecideApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F3D01EC2620B0BB004DFA8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F3D01F52620B0BB004DFA8D /* Plinko_DecideTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F3D01F72620B0BB004DFA8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F3D02002620B0BB004DFA8D /* Plinko_DecideUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3F3D01F22620B0BB004DFA8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F3D01DE2620B0B6004DFA8D /* Plinko Decide */;
+			targetProxy = 3F3D01F12620B0BB004DFA8D /* PBXContainerItemProxy */;
+		};
+		3F3D01FD2620B0BB004DFA8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F3D01DE2620B0B6004DFA8D /* Plinko Decide */;
+			targetProxy = 3F3D01FC2620B0BB004DFA8D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3F3D02022620B0BB004DFA8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3F3D02032620B0BB004DFA8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3F3D02052620B0BB004DFA8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Plinko Decide/Preview Content\"";
+				DEVELOPMENT_TEAM = ZYV9QLBU33;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Plinko Decide/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "SIM.Plinko-Decide";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3F3D02062620B0BB004DFA8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Plinko Decide/Preview Content\"";
+				DEVELOPMENT_TEAM = ZYV9QLBU33;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Plinko Decide/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "SIM.Plinko-Decide";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3F3D02082620B0BB004DFA8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZYV9QLBU33;
+				INFOPLIST_FILE = "Plinko DecideTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "SIM.Plinko-DecideTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Plinko Decide.app/Plinko Decide";
+			};
+			name = Debug;
+		};
+		3F3D02092620B0BB004DFA8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZYV9QLBU33;
+				INFOPLIST_FILE = "Plinko DecideTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "SIM.Plinko-DecideTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Plinko Decide.app/Plinko Decide";
+			};
+			name = Release;
+		};
+		3F3D020B2620B0BB004DFA8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZYV9QLBU33;
+				INFOPLIST_FILE = "Plinko DecideUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "SIM.Plinko-DecideUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Plinko Decide";
+			};
+			name = Debug;
+		};
+		3F3D020C2620B0BB004DFA8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZYV9QLBU33;
+				INFOPLIST_FILE = "Plinko DecideUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "SIM.Plinko-DecideUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Plinko Decide";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F3D01DA2620B0B5004DFA8D /* Build configuration list for PBXProject "Plinko Decide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F3D02022620B0BB004DFA8D /* Debug */,
+				3F3D02032620B0BB004DFA8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F3D02042620B0BB004DFA8D /* Build configuration list for PBXNativeTarget "Plinko Decide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F3D02052620B0BB004DFA8D /* Debug */,
+				3F3D02062620B0BB004DFA8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F3D02072620B0BB004DFA8D /* Build configuration list for PBXNativeTarget "Plinko DecideTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F3D02082620B0BB004DFA8D /* Debug */,
+				3F3D02092620B0BB004DFA8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F3D020A2620B0BB004DFA8D /* Build configuration list for PBXNativeTarget "Plinko DecideUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F3D020B2620B0BB004DFA8D /* Debug */,
+				3F3D020C2620B0BB004DFA8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3F3D01D72620B0B5004DFA8D /* Project object */;
+}

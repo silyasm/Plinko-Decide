@@ -13,6 +13,7 @@
 		3F3D01EA2620B0BB004DFA8D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F3D01E92620B0BB004DFA8D /* Preview Assets.xcassets */; };
 		3F3D01F52620B0BB004DFA8D /* Plinko_DecideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3D01F42620B0BB004DFA8D /* Plinko_DecideTests.swift */; };
 		3F3D02002620B0BB004DFA8D /* Plinko_DecideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3D01FF2620B0BB004DFA8D /* Plinko_DecideUITests.swift */; };
+		3F3D021E2624A248004DFA8D /* OptionsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3D021D2624A248004DFA8D /* OptionsList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		3F3D01FB2620B0BB004DFA8D /* Plinko DecideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Plinko DecideUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3D01FF2620B0BB004DFA8D /* Plinko_DecideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plinko_DecideUITests.swift; sourceTree = "<group>"; };
 		3F3D02012620B0BB004DFA8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F3D021D2624A248004DFA8D /* OptionsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				3F3D01E22620B0B6004DFA8D /* Plinko_DecideApp.swift */,
 				3F3D01E42620B0B6004DFA8D /* ContentView.swift */,
+				3F3D021D2624A248004DFA8D /* OptionsList.swift */,
 				3F3D01E62620B0BB004DFA8D /* Assets.xcassets */,
 				3F3D01EB2620B0BB004DFA8D /* Info.plist */,
 				3F3D01E82620B0BB004DFA8D /* Preview Content */,
@@ -261,6 +264,7 @@
 			files = (
 				3F3D01E52620B0B6004DFA8D /* ContentView.swift in Sources */,
 				3F3D01E32620B0B6004DFA8D /* Plinko_DecideApp.swift in Sources */,
+				3F3D021E2624A248004DFA8D /* OptionsList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

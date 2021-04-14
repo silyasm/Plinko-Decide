@@ -7,5 +7,7 @@
 
 import Foundation
 class OptionsList : ObservableObject {
-    @Published var options = [OptionItem(name: "Korean"), OptionItem(name: "American"), OptionItem(name: "Chinese")]
+    @Published var options = [OptionItem(name: "Korean"),
+                              OptionItem(name: "American"),
+                              OptionItem(name: "Chinese")]
 }

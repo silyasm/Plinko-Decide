@@ -8,23 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var optionsList = OptionsList()
+    @ObservedObject var optionsList = OptionsList()
+    @State private var showingAddOptionView = false
 
     var body: some View {
         NavigationView {
             List {
                 ForEach(optionsList.options) { option in
-                    Text(option.name)
+                    HStack {
+                        Text(option.name)
+                    }
                 }
-                .onMove(perform: { indices, newOffset in
-                    optionsList.options.move(fromOffsets: indices, toOffset: newOffset)
+                .onMove(perform: { indices, newOffset in optionsList.options.move(fromOffsets: indices, toOffset: newOffset)
                 })
                 .onDelete(perform: { indexSet in
                     optionsList.options.remove(atOffsets: indexSet)
                 })
             }
+            .sheet(isPresented: $showingAddOptionView, content: {
+                AddOptionView(optionsList: optionsList)
+            })
             .navigationBarTitle("Plinko Decide")
-            .navigationBarItems(leading: EditButton())
+            .navigationBarItems(leading: EditButton(),
+                                trailing: Button( action: {
+                                    showingAddOptionView = true}) {
+                                    Image(systemName: "plus")
+                                })
         }
     }
 }
@@ -35,7 +44,7 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct OptionItem : Identifiable{
+struct OptionItem : Identifiable {
     var id = UUID()
     var name = ""
 }

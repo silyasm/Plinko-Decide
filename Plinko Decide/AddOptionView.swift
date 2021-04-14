@@ -17,6 +17,14 @@ struct AddOptionView: View {
             Form {
                 TextField("Name", text: $name)
             }
+            .navigationBarTitle("Add New Option")
+            .navigationBarItems(trailing: Button("Save") {
+                if name.count > 0 {
+                    let option = OptionItem(id: UUID(), name: name)
+                    optionsList.options.append(option)
+                    presentationMode.wrappedValue.dismiss()
+                }
+            })
         }
 }
 }

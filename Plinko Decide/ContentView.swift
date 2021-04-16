@@ -44,7 +44,7 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct OptionItem : Identifiable {
+struct OptionItem : Identifiable, Codable {
     var id = UUID()
     var name = ""
 }

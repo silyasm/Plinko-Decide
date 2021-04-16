@@ -7,7 +7,23 @@
 
 import Foundation
 class OptionsList : ObservableObject {
-    @Published var options = [OptionItem(name: "Korean"),
-                              OptionItem(name: "American"),
-                              OptionItem(name: "Chinese")]
+    @Published var options : [OptionItem] {
+        didSet {
+            let encoder = JSONEncoder()
+            if let encoded = try? encoder.encode(options) {
+                UserDefaults.standard.set(encoded, forKey: "data")
+            }
+        }
+    }
+    
+    init() {
+        if let options = UserDefaults.standard.data(forKey: "data") {
+            let decoder = JSONDecoder()
+            if let decoded = try? decoder.decode([OptionItem].self, from: options) {
+                self.options = decoded
+                return
+            }
+        }
+        options = []
+    }
 }

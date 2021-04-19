@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "f31f1b6ffe3107f51c4ae01c81d7e112--circus-theme-circus-party.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

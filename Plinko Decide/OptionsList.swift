@@ -7,6 +7,7 @@
 
 import Foundation
 class OptionsList : ObservableObject {
+    
     @Published var options : [OptionItem] {
         didSet {
             let encoder = JSONEncoder()

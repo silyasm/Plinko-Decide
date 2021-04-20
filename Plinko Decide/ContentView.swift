@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var optionsList = OptionsList()
     @State private var showingAddOptionView = false
+    @State private var showingSelectPresetView = false
 
     var body: some View {
         NavigationView {

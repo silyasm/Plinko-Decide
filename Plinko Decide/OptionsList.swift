@@ -7,7 +7,6 @@
 
 import Foundation
 class OptionsList : ObservableObject {
-    
     @Published var options : [OptionItem] {
         didSet {
             let encoder = JSONEncoder()
@@ -25,7 +24,12 @@ class OptionsList : ObservableObject {
                                                                  OptionItem(name: "Titanic"),
                                                                  OptionItem(name: "Avengers"),
                                                                  OptionItem(name: "The Departed"),
-                                                                 OptionItem(name: "Inception")])]
+                                                                 OptionItem(name: "Inception")]),
+                              Preset(name: "Colors", optionSet: [OptionItem(name: "Blue"),
+                                                                 OptionItem(name: "Red"),
+                                                                 OptionItem(name: "Green"),
+                                                                 OptionItem(name: "Yellow"),
+                                                                 OptionItem(name: "Purple")])]
     
     init() {
         if let options = UserDefaults.standard.data(forKey: "data") {

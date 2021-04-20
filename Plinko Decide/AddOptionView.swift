@@ -26,7 +26,7 @@ struct AddOptionView: View {
                 }
             })
         }
-}
+    }
 }
 
 struct AddOptionView_Previews: PreviewProvider {

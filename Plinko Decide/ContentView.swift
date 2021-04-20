@@ -49,3 +49,9 @@ struct OptionItem : Identifiable, Codable {
     var id = UUID()
     var name = ""
 }
+
+struct Preset : Identifiable {
+    var id = UUID()
+    var name = ""
+    var optionSet : [OptionItem]
+}

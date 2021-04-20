@@ -16,6 +16,16 @@ class OptionsList : ObservableObject {
         }
     }
     
+    @Published var presets = [Preset(name: "Cuisine", optionSet: [OptionItem(name: "American"),
+                                                                  OptionItem(name: "Chinese"),
+                                                                  OptionItem(name: "Italian"),
+                                                                  OptionItem(name: "Mexican")]),
+                              Preset(name: "Movies", optionSet: [OptionItem(name: "Star Wars"),
+                                                                 OptionItem(name: "Titanic"),
+                                                                 OptionItem(name: "Avengers"),
+                                                                 OptionItem(name: "The Departed"),
+                                                                 OptionItem(name: "Inception")])]
+    
     init() {
         if let options = UserDefaults.standard.data(forKey: "data") {
             let decoder = JSONDecoder()

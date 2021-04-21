@@ -21,12 +21,17 @@ struct SelectPresetView: View {
                         Spacer()
                         Button(action: {
                             optionsList.options = preset.optionSet
-                            presentationMode.wrappedValue.dismiss()
                         }, label: {
                             Text("Select")
                                 .foregroundColor(.blue)
                         })
                     }
+                }
+                
+                NavigationLink(destination: ContentView(optionsList: OptionsList())) {
+                    Text("Let's Plinko!")
+                        .font(.headline)
+                        .foregroundColor(.blue)
                 }
             }
             .navigationBarTitle(Text("Select Preset"))

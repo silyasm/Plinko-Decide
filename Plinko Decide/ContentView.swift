@@ -11,7 +11,6 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var optionsList = OptionsList()
     @State private var showingAddOptionView = false
-    @State private var showingSelectPresetView = false
 
     var body: some View {
         NavigationView {
@@ -26,6 +25,12 @@ struct ContentView: View {
                 .onDelete(perform: { indexSet in
                     optionsList.options.remove(atOffsets: indexSet)
                 })
+                
+                NavigationLink(destination: SelectPresetView(optionsList: OptionsList())) {
+                    Text("Select From Presets")
+                        .font(.headline)
+                        .foregroundColor(.blue)
+                }
             }
             .sheet(isPresented: $showingAddOptionView, content: {
                 AddOptionView(optionsList: optionsList)

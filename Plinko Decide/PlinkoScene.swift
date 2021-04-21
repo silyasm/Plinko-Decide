@@ -29,6 +29,10 @@ class GameScene: SKScene {
     makeBouncer(at: CGPoint(x:250, y:0))
     makeBouncer(at: CGPoint(x:400, y:0))
     makeBouncer(at: CGPoint(x:150, y:0))
+    makeSlot(at: CGPoint(x: 100, y: 0), isGood: true)
+    makeSlot(at: CGPoint(x: 325, y: 0), isGood: false)
+    makeSlot(at: CGPoint(x: 175, y: 0), isGood: false)
+    makeSlot(at: CGPoint(x: 450, y: 0), isGood: true)
     }
     
   
@@ -40,6 +44,7 @@ class GameScene: SKScene {
         ball.physicsBody = SKPhysicsBody(circleOfRadius: ball.size.width / 2.0)
         ball.physicsBody?.restitution = 0.4
         ball.position = location
+        ball.name = "ball"
         addChild(ball)
     }
     func makeBouncer(at postion: CGPoint){
@@ -48,5 +53,20 @@ class GameScene: SKScene {
          bouncer.physicsBody = SKPhysicsBody(circleOfRadius: bouncer.size.width/2)
          bouncer.physicsBody?.isDynamic=false
          addChild(bouncer)
+    }
+    func makeSlot(at Position:CGPoint, isGood:Bool) {
+        var slotBase: SKSpriteNode
+        if isGood {
+            slotBase = SKSpriteNode(imageNamed: "slotBaseGood")
+            slotBase.name = "good"
+        }
+        else {
+            slotBase = SKSpriteNode(imageNamed: "slotBaseBad")
+            slotBase.name = "bad"
+        }
+        slotBase.physicsBody = SKPhysicsBody(rectangleOf: slotBase.size)
+        slotBase.physicsBody?.isDynamic = false
+        slotBase.position = position
+        addChild(slotBase)
     }
 }

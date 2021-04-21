@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "67-674937_bucket-clip-art-7-bucket-clip-art.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

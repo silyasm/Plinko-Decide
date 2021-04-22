@@ -7,10 +7,17 @@
 // Declan
 
 import SwiftUI
+import SpriteKit
 
 struct ContentView: View {
     @ObservedObject var optionsList = OptionsList()
     @State private var showingAddOptionView = false
+    var scene: SKScene {
+        let scene = GameScene()
+        scene.size = CGSize(width: 500, height: 500)
+        scene.scaleMode = .fill
+        return scene
+    }
 
     var body: some View {
         NavigationView {
@@ -31,6 +38,8 @@ struct ContentView: View {
                         .font(.headline)
                         .foregroundColor(.blue)
                 }
+                SpriteView(scene: scene)
+                    .frame(width: 500, height: 500)
             }
             .sheet(isPresented: $showingAddOptionView, content: {
                 AddOptionView(optionsList: optionsList)

@@ -11,14 +11,14 @@ import SpriteKit
 struct PlinkoBoardView: View {
     var scene: SKScene {
         let scene = GameScene()
-        scene.size = CGSize(width: 500, height: 500)
+        scene.size = CGSize(width: 300, height: 500)
         scene.scaleMode = .fill
         return scene
     }
     
     var body: some View {
         SpriteView(scene: scene)
-            .frame(width: 500, height: 500)    }
+            .frame(width: 300, height: 500)    }
 }
 
 struct PlinkoBoardView_Previews: PreviewProvider {

@@ -28,7 +28,7 @@ struct SelectPresetView: View {
                     }
                 }
                 
-                NavigationLink(destination: ContentView(optionsList: OptionsList())) {
+                NavigationLink(destination: PlinkoBoardView()) {
                     Text("Let's Plinko!")
                         .font(.headline)
                         .foregroundColor(.blue)

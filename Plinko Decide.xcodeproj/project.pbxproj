@@ -16,6 +16,7 @@
 		3F3D021E2624A248004DFA8D /* OptionsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3D021D2624A248004DFA8D /* OptionsList.swift */; };
 		3F3D02232624A46C004DFA8D /* AddOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3D02222624A46C004DFA8D /* AddOptionView.swift */; };
 		3F7073E0262F2A7C0064CF83 /* SelectPresetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7073DF262F2A7B0064CF83 /* SelectPresetView.swift */; };
+		3F7073E526331D2A0064CF83 /* PlinkoBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7073E426331D2A0064CF83 /* PlinkoBoardView.swift */; };
 		4A440C93262DDA85007B3A03 /* PlinkoScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A440C92262DDA85007B3A03 /* PlinkoScene.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		3F3D021D2624A248004DFA8D /* OptionsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsList.swift; sourceTree = "<group>"; };
 		3F3D02222624A46C004DFA8D /* AddOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOptionView.swift; sourceTree = "<group>"; };
 		3F7073DF262F2A7B0064CF83 /* SelectPresetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPresetView.swift; sourceTree = "<group>"; };
+		3F7073E426331D2A0064CF83 /* PlinkoBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlinkoBoardView.swift; sourceTree = "<group>"; };
 		4A440C92262DDA85007B3A03 /* PlinkoScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlinkoScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 				3F3D01E22620B0B6004DFA8D /* Plinko_DecideApp.swift */,
 				4A440C92262DDA85007B3A03 /* PlinkoScene.swift */,
 				3F3D01E42620B0B6004DFA8D /* ContentView.swift */,
+				3F7073E426331D2A0064CF83 /* PlinkoBoardView.swift */,
 				3F3D02222624A46C004DFA8D /* AddOptionView.swift */,
 				3F3D021D2624A248004DFA8D /* OptionsList.swift */,
 				3F7073DF262F2A7B0064CF83 /* SelectPresetView.swift */,
@@ -276,6 +279,7 @@
 				4A440C93262DDA85007B3A03 /* PlinkoScene.swift in Sources */,
 				3F3D01E32620B0B6004DFA8D /* Plinko_DecideApp.swift in Sources */,
 				3F3D021E2624A248004DFA8D /* OptionsList.swift in Sources */,
+				3F7073E526331D2A0064CF83 /* PlinkoBoardView.swift in Sources */,
 				3F3D02232624A46C004DFA8D /* AddOptionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

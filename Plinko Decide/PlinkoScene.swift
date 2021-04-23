@@ -8,29 +8,24 @@
 import SpriteKit
 import GameplayKit
 class GameScene: SKScene {
+    var ball = SKShapeNode()
   override func didMove(to view: SKView) {
     let stars = SKTexture(imageNamed: "Board")
-    for i in 0...1 {
+  //  for i in 0...1 {
         let boardBackground = SKSpriteNode(texture: stars)
-        boardBackground.zPosition = -1
-        boardBackground.position = CGPoint(x: 0, y: boardBackground.size.height * CGFloat(i))
+        boardBackground.position = CGPoint(x: 150, y: 300)
         addChild(boardBackground)
-        let moveDown = SKAction.moveBy(x: 0, y: -boardBackground.size.height, duration: 20)
-        let moveReset = SKAction.moveBy(x: 0, y: boardBackground.size.height, duration: 0)
-        let moveLoop = SKAction.sequence([moveDown, moveReset])
-        let moveForever = SKAction.repeatForever(moveLoop)
-        boardBackground.run(moveForever)
        // physicsWorld.contactDelegate = self
         self.physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
        // createBackground()
  physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
-    }
-    makeBouncer(at: CGPoint(x:0, y:0))
-    makeBouncer(at: CGPoint(x:250, y:0))
+  //  }
+    makeBouncer(at: CGPoint(x:150, y:300))
+    makeBouncer(at: CGPoint(x:250, y:300))
     makeBouncer(at: CGPoint(x:400, y:0))
-    makeBouncer(at: CGPoint(x:150, y:0))
+    makeBouncer(at: CGPoint(x:100, y:0))
     makeSlot(at: CGPoint(x: 100, y: 0), isGood: true)
-    makeSlot(at: CGPoint(x: 325, y: 0), isGood: false)
+    makeSlot(at: CGPoint(x:150, y:300), isGood: false)
     makeSlot(at: CGPoint(x: 175, y: 0), isGood: false)
     makeSlot(at: CGPoint(x: 450, y: 0), isGood: true)
     }
@@ -40,16 +35,26 @@ class GameScene: SKScene {
         guard let touch = touches.first else { return}
         let location = touch.location(in: self)
         
-        let ball = SKSpriteNode(imageNamed: "redBall")
-        ball.physicsBody = SKPhysicsBody(circleOfRadius: ball.size.width / 2.0)
-        ball.physicsBody?.restitution = 0.4
+     // makeBall()
+        ball.removeFromParent() // remove the ball (if it exists)
+        ball = SKShapeNode(circleOfRadius: 10)
+        //    ball.position = CGPoint(x: touch.location, y: 300)
+        ball.strokeColor = .black
+        ball.fillColor = .yellow
+        // physics shape matches ball image
+        ball.physicsBody = SKPhysicsBody(circleOfRadius: 10)
         ball.position = location
         ball.name = "ball"
         addChild(ball)
     }
+   // func makeBall(){
+    
+  
+//}
     func makeBouncer(at postion: CGPoint){
         let bouncer = SKSpriteNode(imageNamed: "bouncer")
-         bouncer.position = position
+      //   bouncer.position = position
+        bouncer.size = CGSize(width: 20, height: 20)
          bouncer.physicsBody = SKPhysicsBody(circleOfRadius: bouncer.size.width/2)
          bouncer.physicsBody?.isDynamic=false
          addChild(bouncer)
@@ -59,10 +64,12 @@ class GameScene: SKScene {
         if isGood {
             slotBase = SKSpriteNode(imageNamed: "slotBaseGood")
             slotBase.name = "good"
+            slotBase.size = CGSize(width: 20, height: 20)
         }
         else {
             slotBase = SKSpriteNode(imageNamed: "slotBaseBad")
             slotBase.name = "bad"
+            slotBase.size = CGSize(width: 20, height: 20)
         }
         slotBase.physicsBody = SKPhysicsBody(rectangleOf: slotBase.size)
         slotBase.physicsBody?.isDynamic = false

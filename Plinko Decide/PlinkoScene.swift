@@ -7,8 +7,12 @@
 
 import SpriteKit
 import GameplayKit
+
 class GameScene: SKScene {
+    var optionsList = OptionsList()
     var ball = SKShapeNode()
+    var optionZone = SKSpriteNode()
+
   override func didMove(to view: SKView) {
     let stars = SKTexture(imageNamed: "Board")
   //  for i in 0...1 {
@@ -24,10 +28,7 @@ class GameScene: SKScene {
     makeBouncer(at: CGPoint(x:250, y:300))
     makeBouncer(at: CGPoint(x:400, y:0))
     makeBouncer(at: CGPoint(x:100, y:0))
-    makeSlot(at: CGPoint(x: 100, y: 0), isGood: true)
-    makeSlot(at: CGPoint(x:150, y:300), isGood: false)
-    makeSlot(at: CGPoint(x: 175, y: 0), isGood: false)
-    makeSlot(at: CGPoint(x: 450, y: 0), isGood: true)
+    makeOptionZones(at: CGPoint(x: 150, y: 0))
     }
     
   
@@ -59,21 +60,17 @@ class GameScene: SKScene {
          bouncer.physicsBody?.isDynamic=false
          addChild(bouncer)
     }
-    func makeSlot(at Position:CGPoint, isGood:Bool) {
-        var slotBase: SKSpriteNode
-        if isGood {
-            slotBase = SKSpriteNode(imageNamed: "slotBaseGood")
-            slotBase.name = "good"
-            slotBase.size = CGSize(width: 20, height: 20)
+    
+    func makeOptionZones(at Position: CGPoint) {
+        
+        for option in optionsList.options {
+            optionZone.name = "\(option)"
+                        optionZone.size = CGSize (width: (300/(optionsList.options.count)), height: 20)
+            optionZone.color = .red
+                        optionZone.physicsBody = SKPhysicsBody(rectangleOf: optionZone.size)
+                        optionZone.physicsBody?.isDynamic = false
+            optionZone.position = position
+                        addChild(optionZone)
         }
-        else {
-            slotBase = SKSpriteNode(imageNamed: "slotBaseBad")
-            slotBase.name = "bad"
-            slotBase.size = CGSize(width: 20, height: 20)
-        }
-        slotBase.physicsBody = SKPhysicsBody(rectangleOf: slotBase.size)
-        slotBase.physicsBody?.isDynamic = false
-        slotBase.position = position
-        addChild(slotBase)
     }
 }

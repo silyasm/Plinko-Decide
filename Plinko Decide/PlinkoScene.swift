@@ -12,6 +12,7 @@ class GameScene: SKScene {
     var optionsList = OptionsList()
     var ball = SKShapeNode()
     var optionZone = SKSpriteNode()
+    var winnerLabel = SKLabelNode()
 
   override func didMove(to view: SKView) {
     let stars = SKTexture(imageNamed: "Board")
@@ -29,6 +30,7 @@ class GameScene: SKScene {
     makeBouncer(at: CGPoint(x:400, y:0))
     makeBouncer(at: CGPoint(x:100, y:0))
     makeOptionZone()
+    makeWinnerLabel()
     }
     
   
@@ -69,5 +71,15 @@ class GameScene: SKScene {
         optionZone.physicsBody?.isDynamic = false
         optionZone.position = CGPoint(x: 150, y: 0)
         addChild(optionZone)
+    }
+    
+    func makeWinnerLabel() {
+        winnerLabel.name = "winnerLabel"
+        winnerLabel.text = ""
+        winnerLabel.fontName = "Helvetica"
+        winnerLabel.fontSize = 25
+        winnerLabel.position = CGPoint(x: 150, y: 250)
+        winnerLabel.alpha = 0
+        addChild(winnerLabel)
     }
 }

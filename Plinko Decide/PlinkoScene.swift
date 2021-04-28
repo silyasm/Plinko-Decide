@@ -28,7 +28,7 @@ class GameScene: SKScene {
     makeBouncer(at: CGPoint(x:250, y:300))
     makeBouncer(at: CGPoint(x:400, y:0))
     makeBouncer(at: CGPoint(x:100, y:0))
-    makeOptionZones(at: CGPoint(x: 150, y: 0))
+    makeOptionZone()
     }
     
   
@@ -61,16 +61,13 @@ class GameScene: SKScene {
          addChild(bouncer)
     }
     
-    func makeOptionZones(at Position: CGPoint) {
-        
-        for option in optionsList.options {
-            optionZone.name = "\(option)"
-                        optionZone.size = CGSize (width: (300/(optionsList.options.count)), height: 20)
-            optionZone.color = .red
-                        optionZone.physicsBody = SKPhysicsBody(rectangleOf: optionZone.size)
-                        optionZone.physicsBody?.isDynamic = false
-            optionZone.position = position
-                        addChild(optionZone)
-        }
+    func makeOptionZone() {
+        optionZone.size = CGSize(width: 300, height: 40)
+        optionZone.color = .red
+        optionZone.name = "optionZone"
+        optionZone.physicsBody = SKPhysicsBody(rectangleOf: optionZone.size)
+        optionZone.physicsBody?.isDynamic = false
+        optionZone.position = CGPoint(x: 150, y: 0)
+        addChild(optionZone)
     }
 }

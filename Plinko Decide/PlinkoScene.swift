@@ -8,13 +8,16 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     var optionsList = OptionsList()
     var ball = SKShapeNode()
     var optionZone = SKSpriteNode()
     var winnerLabel = SKLabelNode()
 
   override func didMove(to view: SKView) {
+    physicsWorld.contactDelegate = self
+    self.physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
+
     let stars = SKTexture(imageNamed: "Board")
   //  for i in 0...1 {
         let boardBackground = SKSpriteNode(texture: stars)
@@ -37,23 +40,32 @@ class GameScene: SKScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return}
         let location = touch.location(in: self)
-        
-     // makeBall()
+        makeBall(location: location)
+    }
+
+    func didBegin(_ contact: SKPhysicsContact) {
+        if contact.bodyA.node?.name == "optionZone" ||
+            contact.bodyB.node?.name == "optionZone" {
+            ball.removeFromParent()
+            let winner = optionsList.options.randomElement()
+            winnerLabel.alpha = 1
+            winnerLabel.text = "The winner is \(winner!.name)"
+        }
+    }
+    
+    func makeBall(location: CGPoint) {
         ball.removeFromParent() // remove the ball (if it exists)
         ball = SKShapeNode(circleOfRadius: 10)
-        //    ball.position = CGPoint(x: touch.location, y: 300)
         ball.strokeColor = .black
         ball.fillColor = .yellow
-        // physics shape matches ball image
         ball.physicsBody = SKPhysicsBody(circleOfRadius: 10)
+        ball.physicsBody?.usesPreciseCollisionDetection = true
+        ball.physicsBody?.contactTestBitMask = (ball.physicsBody?.collisionBitMask)!
         ball.position = location
         ball.name = "ball"
         addChild(ball)
     }
-   // func makeBall(){
     
-  
-//}
     func makeBouncer(at postion: CGPoint){
         let bouncer = SKSpriteNode(imageNamed: "bouncer")
       //   bouncer.position = position
@@ -64,12 +76,11 @@ class GameScene: SKScene {
     }
     
     func makeOptionZone() {
-        optionZone.size = CGSize(width: 300, height: 40)
-        optionZone.color = .red
+        optionZone = SKSpriteNode(color: .red, size: CGSize(width: 300, height: 40))
+        optionZone.position = CGPoint(x: 150, y: 0)
         optionZone.name = "optionZone"
         optionZone.physicsBody = SKPhysicsBody(rectangleOf: optionZone.size)
         optionZone.physicsBody?.isDynamic = false
-        optionZone.position = CGPoint(x: 150, y: 0)
         addChild(optionZone)
     }
     
@@ -78,7 +89,8 @@ class GameScene: SKScene {
         winnerLabel.text = ""
         winnerLabel.fontName = "Helvetica"
         winnerLabel.fontSize = 25
-        winnerLabel.position = CGPoint(x: 150, y: 250)
+        winnerLabel.color = .black
+        winnerLabel.position = CGPoint(x: 150, y: 300)
         winnerLabel.alpha = 0
         addChild(winnerLabel)
     }

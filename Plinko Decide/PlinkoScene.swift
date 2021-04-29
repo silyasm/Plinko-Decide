@@ -18,11 +18,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     physicsWorld.contactDelegate = self
     self.physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
 
-    let stars = SKTexture(imageNamed: "Board")
+   // let stars = SKTexture(imageNamed: "Board")
   //  for i in 0...1 {
-        let boardBackground = SKSpriteNode(texture: stars)
-        boardBackground.position = CGPoint(x: 150, y: 300)
-        addChild(boardBackground)
+      //  let boardBackground = SKSpriteNode(texture: stars)
+    //    boardBackground.position = CGPoint(x: 150, y: 300)
+   //     addChild(boardBackground)
        // physicsWorld.contactDelegate = self
         self.physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
        // createBackground()
@@ -70,13 +70,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         bouncer = SKShapeNode(circleOfRadius: 10)
                 //    ball.position = CGPoint(x: touch.location, y: 300)
                 bouncer.strokeColor = .black
-                bouncer.fillColor = .red
+                bouncer.fillColor = .green
                 // physics shape matches ball image
                 bouncer.physicsBody = SKPhysicsBody(circleOfRadius: 30)
                // bounce.position = location
 
                 bouncer.position =  CGPoint(x:100, y:300)
- 
+        
+        bouncer.physicsBody?.isDynamic = false
+        addChild(bouncer)
                 }
 
     

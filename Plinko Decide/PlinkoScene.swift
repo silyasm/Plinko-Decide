@@ -13,7 +13,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var ball = SKShapeNode()
     var optionZone = SKSpriteNode()
     var winnerLabel = SKLabelNode()
-
+    var bouncer = SKShapeNode()
   override func didMove(to view: SKView) {
     physicsWorld.contactDelegate = self
     self.physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
@@ -67,13 +67,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func makeBouncer(at postion: CGPoint){
-        let bouncer = SKSpriteNode(imageNamed: "bouncer")
-      //   bouncer.position = position
-        bouncer.size = CGSize(width: 20, height: 20)
-         bouncer.physicsBody = SKPhysicsBody(circleOfRadius: bouncer.size.width/2)
-         bouncer.physicsBody?.isDynamic=false
-         addChild(bouncer)
-    }
+        bouncer = SKShapeNode(circleOfRadius: 10)
+                //    ball.position = CGPoint(x: touch.location, y: 300)
+                bouncer.strokeColor = .black
+                bouncer.fillColor = .red
+                // physics shape matches ball image
+                bouncer.physicsBody = SKPhysicsBody(circleOfRadius: 30)
+               // bounce.position = location
+
+                bouncer.position =  CGPoint(x:100, y:300)
+ 
+                }
+
     
     func makeOptionZone() {
         optionZone = SKSpriteNode(color: .red, size: CGSize(width: 300, height: 40))

@@ -20,8 +20,8 @@ struct SelectPresetView: View {
                             Text(preset.name)
                                 .font(.headline)
                                 .fontWeight(.bold)
-                            ForEach(preset.optionSet) { optionSet in
-                                Text(optionSet.name)
+                            ForEach(preset.optionSet) { option in
+                                Text(option.name)
                                     .font(.body)
                             }
                         }

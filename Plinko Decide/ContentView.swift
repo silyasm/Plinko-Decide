@@ -12,7 +12,7 @@ import SpriteKit
 struct ContentView: View {
     @ObservedObject var optionsList = OptionsList()
     @State private var showingAddOptionView = false
-
+    
     var body: some View {
         NavigationView {
             List {
@@ -45,7 +45,7 @@ struct ContentView: View {
             .navigationBarTitle("Plinko Decide")
             .navigationBarItems(leading: EditButton(),
                                 trailing: Button( action: {
-                                    showingAddOptionView = true}) {
+                                                    showingAddOptionView = true}) {
                                     Image(systemName: "plus")
                                 })
         }

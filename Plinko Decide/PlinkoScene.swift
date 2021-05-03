@@ -89,46 +89,32 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func makeEvenRow(height: Int) {
-        makeBouncer(position: CGPoint(x: 15, y: height))
-        makeBouncer(position: CGPoint(x: 45, y: height))
-        makeBouncer(position: CGPoint(x: 75, y: height))
-        makeBouncer(position: CGPoint(x: 105, y: height))
-        makeBouncer(position: CGPoint(x: 135, y: height))
-        makeBouncer(position: CGPoint(x: 165, y: height))
-        makeBouncer(position: CGPoint(x: 195, y: height))
-        makeBouncer(position: CGPoint(x: 225, y: height))
-        makeBouncer(position: CGPoint(x: 255, y: height))
-        makeBouncer(position: CGPoint(x: 285, y: height))
+        for i in 0...9 {
+            makeBouncer(position: CGPoint(x: (15 + (30 * i)), y: height))
+        }
     }
     
     func makeOddRow(height: Int) {
-        makeBouncer(position: CGPoint(x: 30, y: height))
-        makeBouncer(position: CGPoint(x: 60, y: height))
-        makeBouncer(position: CGPoint(x: 90, y: height))
-        makeBouncer(position: CGPoint(x: 120, y: height))
-        makeBouncer(position: CGPoint(x: 150, y: height))
-        makeBouncer(position: CGPoint(x: 180, y: height))
-        makeBouncer(position: CGPoint(x: 210, y: height))
-        makeBouncer(position: CGPoint(x: 240, y: height))
-        makeBouncer(position: CGPoint(x: 270, y: height))
+        for i in 0...8 {
+            makeBouncer(position: CGPoint(x: (30 + (30 * i)), y: height))
+        }
     }
     
     func makeBouncersAppear() {
-        makeEvenRow(height: 400)
-        makeOddRow(height: 350)
-        makeEvenRow(height: 300)
-        makeOddRow(height: 250)
-        makeEvenRow(height: 200)
-        makeOddRow(height: 150)
-        makeEvenRow(height: 100)
-        makeOddRow(height: 50)
+        for i in 1...4 {
+            makeEvenRow(height: (100 * i))
+        }
+        
+        for i in 0...3 {
+            makeOddRow(height: (50 + (100 * i)))
+        }
     }
     
     override func update(_ currentTime: TimeInterval) {
         if ballDropped {
             if abs(ball.physicsBody!.velocity.dx) == 0 {
                 if abs(ball.physicsBody!.velocity.dy) == 0 {
-                    ball.physicsBody?.applyImpulse(CGVector(dx: Int.random(in: 5...10), dy: Int.random(in: 5...10)))
+                    ball.physicsBody?.applyImpulse(CGVector(dx: Int.random(in: -3...3), dy: Int.random(in: 1...3)))
                 }
             }
         }

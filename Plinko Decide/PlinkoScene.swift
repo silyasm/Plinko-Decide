@@ -49,7 +49,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             ball.removeFromParent()
             let winner = optionsList.options.randomElement()
             winnerLabel.alpha = 1
-            winnerLabel.text = "The winner is \(winner!.name)"
+            winnerLabel.text = "The winner is \(winner!.name)!"
         }
     }
     
@@ -94,10 +94,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func makeWinnerLabel() {
         winnerLabel.name = "winnerLabel"
         winnerLabel.text = ""
-        winnerLabel.fontName = "Helvetica"
+        winnerLabel.fontName = "Arial"
         winnerLabel.fontSize = 25
         winnerLabel.color = .black
-        winnerLabel.position = CGPoint(x: 150, y: 300)
+        winnerLabel.position = CGPoint(x: 150, y: 400)
         winnerLabel.alpha = 0
         addChild(winnerLabel)
     }

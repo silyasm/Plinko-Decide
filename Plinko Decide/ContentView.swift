@@ -34,7 +34,7 @@ struct ContentView: View {
                 }
                 
                 NavigationLink(destination: PlinkoBoardView()) {
-                    Text("Let's Plinko!")
+                    Text("Let Plinko Decide!")
                         .font(.headline)
                         .foregroundColor(.blue)
                 }

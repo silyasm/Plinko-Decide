@@ -14,22 +14,30 @@ struct SelectPresetView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(optionsList.presets) {preset in
+                ForEach(optionsList.presets) { preset in
                     HStack {
-                        Text(preset.name)
-                            .font(.headline)
+                        VStack {
+                            Text(preset.name)
+                                .font(.headline)
+                                .fontWeight(.bold)
+                            ForEach(preset.optionSet) { optionSet in
+                                Text(optionSet.name)
+                                    .font(.body)
+                            }
+                        }
                         Spacer()
                         Button(action: {
                             optionsList.options = preset.optionSet
                         }, label: {
                             Text("Select")
                                 .foregroundColor(.blue)
+                                .font(.headline)
                         })
                     }
                 }
                 
                 NavigationLink(destination: PlinkoBoardView()) {
-                    Text("Let's Plinko!")
+                    Text("Let Plinko Decide!")
                         .font(.headline)
                         .foregroundColor(.blue)
                 }

@@ -14,27 +14,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var optionZone = SKSpriteNode()
     var winnerLabel = SKLabelNode()
     var bouncer = SKShapeNode()
+    var ballDropped = false
     
-  override func didMove(to view: SKView) {
-    physicsWorld.contactDelegate = self
-    self.physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
-    physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
-    
-    makeBouncersAppear()
-    makeOptionZone()
-    makeWinnerLabel()
+    override func didMove(to view: SKView) {
+        physicsWorld.contactDelegate = self
+        self.physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
+        physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
+        
+        makeBouncersAppear()
+        makeOptionZone()
+        makeWinnerLabel()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return}
+        ballDropped = true
         let location = touch.location(in: self)
         makeBall(location: location)
     }
-
+    
     func didBegin(_ contact: SKPhysicsContact) {
         if contact.bodyA.node?.name == "optionZone" ||
             contact.bodyB.node?.name == "optionZone" {
             ball.removeFromParent()
+            ballDropped = false
             let winner = optionsList.options.randomElement()
             winnerLabel.alpha = 1
             winnerLabel.text = "The winner is \(winner!.name)!"
@@ -62,8 +65,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         bouncer.position = position
         bouncer.physicsBody?.isDynamic = false
         addChild(bouncer)
-                }
-
+    }
+    
     
     func makeOptionZone() {
         optionZone = SKSpriteNode(color: .red, size: CGSize(width: 300, height: 40))
@@ -119,5 +122,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         makeOddRow(height: 150)
         makeEvenRow(height: 100)
         makeOddRow(height: 50)
+    }
+    
+    override func update(_ currentTime: TimeInterval) {
+        if ballDropped {
+            if abs(ball.physicsBody!.velocity.dx) == 0 {
+                if abs(ball.physicsBody!.velocity.dy) == 0 {
+                    ball.physicsBody?.applyImpulse(CGVector(dx: Int.random(in: 5...10), dy: Int.random(in: 5...10)))
+                }
+            }
+        }
     }
 }

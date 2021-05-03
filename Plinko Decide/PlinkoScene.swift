@@ -14,29 +14,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var optionZone = SKSpriteNode()
     var winnerLabel = SKLabelNode()
     var bouncer = SKShapeNode()
+    
   override func didMove(to view: SKView) {
     physicsWorld.contactDelegate = self
     self.physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
-
-   // let stars = SKTexture(imageNamed: "Board")
-  //  for i in 0...1 {
-      //  let boardBackground = SKSpriteNode(texture: stars)
-    //    boardBackground.position = CGPoint(x: 150, y: 300)
-   //     addChild(boardBackground)
-       // physicsWorld.contactDelegate = self
-        self.physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
-       // createBackground()
- physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
-  //  }
-    makeBouncer(at: CGPoint(x:150, y:300))
-    makeBouncer(at: CGPoint(x:250, y:300))
-    makeBouncer(at: CGPoint(x:400, y:0))
-    makeBouncer(at: CGPoint(x:100, y:0))
+    physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
+    
+    makeBouncersAppear()
     makeOptionZone()
     makeWinnerLabel()
     }
     
-  
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return}
         let location = touch.location(in: self)
@@ -66,17 +54,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(ball)
     }
     
-    func makeBouncer(at postion: CGPoint){
-        bouncer = SKShapeNode(circleOfRadius: 10)
-                //    ball.position = CGPoint(x: touch.location, y: 300)
-                bouncer.strokeColor = .black
-                bouncer.fillColor = .green
-                // physics shape matches ball image
-                bouncer.physicsBody = SKPhysicsBody(circleOfRadius: 30)
-               // bounce.position = location
-
-                bouncer.position =  CGPoint(x:100, y:300)
-        
+    func makeBouncer(position: CGPoint) {
+        bouncer = SKShapeNode(circleOfRadius: 5)
+        bouncer.strokeColor = .black
+        bouncer.fillColor = .green
+        bouncer.physicsBody = SKPhysicsBody(circleOfRadius: 5)
+        bouncer.position = position
         bouncer.physicsBody?.isDynamic = false
         addChild(bouncer)
                 }
@@ -97,8 +80,44 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         winnerLabel.fontName = "Arial"
         winnerLabel.fontSize = 25
         winnerLabel.color = .black
-        winnerLabel.position = CGPoint(x: 150, y: 400)
+        winnerLabel.position = CGPoint(x: 150, y: 450)
         winnerLabel.alpha = 0
         addChild(winnerLabel)
+    }
+    
+    func makeEvenRow(height: Int) {
+        makeBouncer(position: CGPoint(x: 15, y: height))
+        makeBouncer(position: CGPoint(x: 45, y: height))
+        makeBouncer(position: CGPoint(x: 75, y: height))
+        makeBouncer(position: CGPoint(x: 105, y: height))
+        makeBouncer(position: CGPoint(x: 135, y: height))
+        makeBouncer(position: CGPoint(x: 165, y: height))
+        makeBouncer(position: CGPoint(x: 195, y: height))
+        makeBouncer(position: CGPoint(x: 225, y: height))
+        makeBouncer(position: CGPoint(x: 255, y: height))
+        makeBouncer(position: CGPoint(x: 285, y: height))
+    }
+    
+    func makeOddRow(height: Int) {
+        makeBouncer(position: CGPoint(x: 30, y: height))
+        makeBouncer(position: CGPoint(x: 60, y: height))
+        makeBouncer(position: CGPoint(x: 90, y: height))
+        makeBouncer(position: CGPoint(x: 120, y: height))
+        makeBouncer(position: CGPoint(x: 150, y: height))
+        makeBouncer(position: CGPoint(x: 180, y: height))
+        makeBouncer(position: CGPoint(x: 210, y: height))
+        makeBouncer(position: CGPoint(x: 240, y: height))
+        makeBouncer(position: CGPoint(x: 270, y: height))
+    }
+    
+    func makeBouncersAppear() {
+        makeEvenRow(height: 400)
+        makeOddRow(height: 350)
+        makeEvenRow(height: 300)
+        makeOddRow(height: 250)
+        makeEvenRow(height: 200)
+        makeOddRow(height: 150)
+        makeEvenRow(height: 100)
+        makeOddRow(height: 50)
     }
 }

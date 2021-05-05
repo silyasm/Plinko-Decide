@@ -31,6 +31,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         ballDropped = true
         let location = touch.location(in: self)
         makeBall(location: location)
+        winnerLabel.alpha = 0
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
@@ -79,12 +80,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func makeWinnerLabel() {
         winnerLabel.name = "winnerLabel"
-        winnerLabel.text = ""
+        winnerLabel.text = "Tap here to drop a ball"
         winnerLabel.fontName = "Arial"
         winnerLabel.fontSize = 25
         winnerLabel.color = .black
         winnerLabel.position = CGPoint(x: 150, y: 450)
-        winnerLabel.alpha = 0
         addChild(winnerLabel)
     }
     
@@ -105,7 +105,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             makeEvenRow(height: (100 * i))
         }
         
-        for i in 0...3 {
+        for i in 1...3 {
             makeOddRow(height: (50 + (100 * i)))
         }
     }

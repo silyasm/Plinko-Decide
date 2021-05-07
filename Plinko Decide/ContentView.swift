@@ -17,9 +17,7 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(optionsList.options) { option in
-                    HStack {
-                        Text(option.name)
-                    }
+                    Text(option.name)
                 }
                 .onMove(perform: { indices, newOffset in optionsList.options.move(fromOffsets: indices, toOffset: newOffset)
                 })

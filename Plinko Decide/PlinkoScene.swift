@@ -68,7 +68,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(bouncer)
     }
     
-    
     func makeOptionZone() {
         optionZone = SKSpriteNode(color: .red, size: CGSize(width: 300, height: 40))
         optionZone.position = CGPoint(x: 150, y: 0)

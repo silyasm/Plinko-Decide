@@ -23,7 +23,7 @@ class OptionsList : ObservableObject {
                               Preset(name: "Movies", optionSet: [OptionItem(name: "Star Wars"),
                                                                  OptionItem(name: "Titanic"),
                                                                  OptionItem(name: "Avengers"),
-                                                                 OptionItem(name: "The Departed"),
+                                                                 OptionItem(name: "Moana"),
                                                                  OptionItem(name: "Inception")]),
                               Preset(name: "Colors", optionSet: [OptionItem(name: "Blue"),
                                                                  OptionItem(name: "Red"),

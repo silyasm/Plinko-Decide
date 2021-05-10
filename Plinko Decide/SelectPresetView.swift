@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SelectPresetView: View {
     @ObservedObject var optionsList : OptionsList
-    @Environment(\.presentationMode) var presentationMode
     @State private var showingPlinkoBoardView = false
 
     var body: some View {
@@ -17,7 +16,7 @@ struct SelectPresetView: View {
             List {
                 ForEach(optionsList.presets) { preset in
                     HStack {
-                        VStack {
+                        VStack(alignment: .leading) {
                             Text(preset.name)
                                 .font(.headline)
                                 .fontWeight(.bold)

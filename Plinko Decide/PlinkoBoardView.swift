@@ -18,7 +18,7 @@ struct PlinkoBoardView: View {
     
     var body: some View {
         SpriteView(scene: scene)
-            .frame(width: 300, height: 500)
+            .frame(width: .infinity, height: .infinity)
     }
 }
 

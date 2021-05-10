@@ -10,7 +10,8 @@ import SwiftUI
 struct SelectPresetView: View {
     @ObservedObject var optionsList : OptionsList
     @Environment(\.presentationMode) var presentationMode
-    
+    @State private var showingPlinkoBoardView = false
+
     var body: some View {
         NavigationView {
             List {
@@ -28,6 +29,7 @@ struct SelectPresetView: View {
                         Spacer()
                         Button(action: {
                             optionsList.options = preset.optionSet
+                            showingPlinkoBoardView = true
                         }, label: {
                             Text("Select")
                                 .foregroundColor(.blue)
@@ -35,13 +37,10 @@ struct SelectPresetView: View {
                         })
                     }
                 }
-                
-                NavigationLink(destination: PlinkoBoardView()) {
-                    Text("Let Plinko Decide!")
-                        .font(.headline)
-                        .foregroundColor(.blue)
-                }
             }
+            .sheet(isPresented: $showingPlinkoBoardView, content: {
+                PlinkoBoardView()
+            })
             .navigationBarTitle(Text("Select Preset"))
         }
     }

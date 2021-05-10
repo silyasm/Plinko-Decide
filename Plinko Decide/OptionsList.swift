@@ -46,7 +46,7 @@ class OptionsList : ObservableObject {
                                                                  OptionItem(name: "Karachi"),
                                                                  OptionItem(name: "Budapest"),
                                                                  OptionItem(name: "Lima")]),
-                              Preset(name: "Toms", optionSet: [OptionItem(name: "Tom Hanks"),
+                              Preset(name: "Famous Toms", optionSet: [OptionItem(name: "Tom Hanks"),
                                                                  OptionItem(name: "Tom Cruise"),
                                                                  OptionItem(name: "Tom Brady"),
                                                                  OptionItem(name: "Tom Holland"),

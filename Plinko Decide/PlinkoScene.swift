@@ -53,7 +53,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         ball.physicsBody = SKPhysicsBody(circleOfRadius: 10)
         ball.physicsBody?.usesPreciseCollisionDetection = true
         ball.physicsBody?.contactTestBitMask = (ball.physicsBody?.collisionBitMask)!
-        ball.position = location
+        ball.position = CGPoint(x: location.x, y: 450)
         ball.name = "ball"
         addChild(ball)
     }
